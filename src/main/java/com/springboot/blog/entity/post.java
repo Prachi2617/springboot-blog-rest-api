@@ -21,7 +21,7 @@ public class post
             strategy = GenerationType.IDENTITY
     )
     private Long id;
-    //hello
+    //hello all
 
     @Column(name = "title", nullable = false)
     private String title;

@@ -31,4 +31,7 @@ public class post
 
     @Column(name = "content", nullable = false)
     private String content;
+
+    @OneToMany(mappedBy = "Post", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Comment> comments = new HashSet<>();
 }

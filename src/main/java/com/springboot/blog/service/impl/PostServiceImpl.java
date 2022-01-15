@@ -98,6 +98,8 @@ public class PostServiceImpl implements PostService
         postRepository.delete(Post);
     }
 
+
+
     //convert entity to dto
     private PostDto mapToDto(post Post)
     {

@@ -14,7 +14,7 @@ import java.util.Set;
 @Table(
         name = "posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}
 )
-public class post
+public class Post
 {
     @Id
     @GeneratedValue(
@@ -32,6 +32,6 @@ public class post
     @Column(name = "content", nullable = false)
     private String content;
 
-    @OneToMany(mappedBy = "Post", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Comment> comments = new HashSet<>();
 }
